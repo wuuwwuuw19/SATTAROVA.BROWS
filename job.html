@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SATTAROVA.BROWS</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/8c09a09baa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <input type="checkbox" id="checkbox-menu" />
+        <label for="checkbox-menu">
+          <ul class="menu touch">
+            <li>
+              <a class="logo" href="index.html"><b>Красота в деталях</b></a>
+            </li>
+            <li><a href="price.html">PRICE</a></li>
+            <li><a href="aboutme.html">О нас</a></li>
+
+            <li><a href="otziv.html">Отзывы</a></li>
+
+            <li><a href="job.html">Работы</a></li>
+          </ul>
+          <span class="toggle">☰</span>
+        </label>
+      </nav>
+    </header>
+    <div class="about">
+      <h3>РАБОТЫ</h3>
+      <div class="img-cont">
+        <div class="img">
+          <img src="https://i.yapx.ru/Xan8L.jpg" />
+        </div>
+
+        <div class="img">
+          <img src="https://i.yapx.ru/Xan8Q.jpg" />
+        </div>
+
+        <div class="img">
+          <img src="https://i.yapx.ru/Xan8R.jpg" />
+        </div>
+
+        <div class="img">
+          <img src="https://i.yapx.ru/Xan8N.jpg" />
+        </div>
+      </div>
+      <div class="pop-up">
+        <span>&times;</span>
+        <img src="https://i.yapx.ru/Xan8N.jpg" />
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".img-cont img").forEach((img) => {
+        img.onclick = () => {
+          document.querySelector(".pop-up").style.display = "block";
+          document.querySelector(".pop-up img").src = img.getAttribute("src");
+        };
+      });
+
+      document.querySelector(".pop-up span").onclick = () => {
+        document.querySelector(".pop-up").style.display = "none";
+      };
+    </script>
+    <footer>
+      <div class="wrapper">
+        <div class="footer-block">
+          <div class="footer-logo">
+            <h1>SATTAROVA.BROWS</h1>
+          </div>
+        </div>
+        <hr />
+        <div class="f">
+          <p>+7 (965) 627 37 25</p>
+          <p>TG-@sattrva</p>
+          <p>INSTA-SATTAROVA.BROWS</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-logo"></div>
+
+          <div class="footer-link">
+            <a href="job.html">Работы</a>
+          </div>
+          <div class="footer-link">
+            <a href="otziv.html">Отзывы</a>
+          </div>
+          <div class="footer-link">
+            <a href="aboutme.html">О нас</a>
+          </div>
+          <div class="footer-link">
+            <a href="price.html">PRICE</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
